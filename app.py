@@ -13,6 +13,13 @@ graph = None
 def index():
     return render_template('index.html')
 
+@app.route('/about_us')
+def about():
+    return render_template('about_us.html')
+
+@app.route('/upload_image')
+def upload():
+    return render_template('upload_image.html')
 def load_model():
     global model
     global graph
