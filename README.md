@@ -27,12 +27,14 @@ Contributions by Julian Yanez, Connor Crossey, Kelly McVey, and Trevor Kulbeth
 * In total, training was done on around 15,000 images
 
 ## How it Works (Webcam):
+![Screenshot1](static/images/ScreenshotWebcam.PNG)
 * OpenCV Video Camera Feed
 * Real-Time Frame Face Detection with MTCNN
 * Image Cropped and Passed to Model for Prediction
 * OpenCV Real-Time Drawing on Video Feed
 
 ## How it Works (Upload):
+![Screenshot2](static/images/ScreenshotUpload.PNG)
 * Image Upload Saved to Directory
 * Processing with OpenCV, MTCNN, and Model from file
 * OpenCV Drawing on Image then Saving for Web Viewing
