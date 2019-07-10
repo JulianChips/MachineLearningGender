@@ -124,6 +124,7 @@ def process_img(face):
 def draw_faces(filepath, result_list):
     # load the image
     data = plt.imread(filepath)
+    image = cv2.imread(filepath,1)
     # plot each face as a subplot
     for i in range(len(result_list)):
         # get coordinates
@@ -137,14 +138,17 @@ def draw_faces(filepath, result_list):
         # find gender for each face
         text = process_img(face)
 #         print(text)
-        plt.text(0.5, 5, text, horizontalalignment='left', verticalalignment='bottom')
+        # plt.text(0.5, 5, text, horizontalalignment='left', verticalalignment='bottom')
+        cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 3)
+        cv2.putText(image, text, (5,25), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0),2, lineType=cv2.LINE_AA)
         # plot face
-        plt.imshow(face)
+        # plt.imshow(face)
     # show the plot
     # if os.path.isfile('static/images/output_faces/output_image.jpg'):
     #     os.remove('static/images/output_faces/output_image.jpg')
     # output_path = 
-    plt.savefig('static/images/output_faces/output_image.jpg')
+    # plt.savefig('static/images/output_faces/output_image.jpg')
+    cv2.imwrite('static/images/output_faces/output_image.jpg',image)
     # plot_image = plt.imread(output_path)
     # print(plot_image)
     time.sleep(5)

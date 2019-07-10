@@ -58,12 +58,15 @@
                   <hr>
                   <!-- Calls a javascript file to output image to webpage for viewing. -->
                   <script src="{{url_for('static', filename='js/app.js')}}"></script>  
-                  <div>
-                    <img src="{{ user_image }}" id = "output" alt="User Image">
-                    <!-- {% for img_name in faceImages %} -->
-                    <img src="{{ userImage }}" id="outputFaces" width="100%" />
-                    <!-- {% endfor %} -->
+                  <div class="row">
+                    <div class="col-10">
+                      <img src="{{ user_image }}" id = "output" alt="User Image" class="w-100">
+                      <!-- {% for img_name in faceImages %} -->
+                      <img src="{{ userImage }}" id="outputFaces" width="100%" class="w-100" />
+                      <!-- {% endfor %} -->
+                    </div>
                   </div>
+                  
               </div>
         </div>
         <hr>
