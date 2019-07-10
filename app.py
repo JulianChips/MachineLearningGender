@@ -93,11 +93,7 @@ def load_image_html():
             except Exception as e: 
                 print(e)
                 return 'upload error'
-    return render_template('upload_image.html')
-
-def output():
-    full_filename = os.path.join(app.config['OUTPUT_FOLDER'], 'output_image.jpg')
-    return render_template("upload_image.html", user_image = full_filename)
+    return render_template('upload_image.html', user_image = 'static/images/family.jpg')
 
 def process_img(face):
     # K.clear_session()
@@ -138,17 +134,25 @@ def draw_faces(filepath, result_list):
         # find gender for each face
         text = process_img(face)
 #         print(text)
+<<<<<<< HEAD
+        plt.title(text, loc='center', fontdict={"fontsize": 24}, pad= 5)
+=======
         # plt.text(0.5, 5, text, horizontalalignment='left', verticalalignment='bottom')
         cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 3)
         cv2.putText(image, text, (5,25), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0),2, lineType=cv2.LINE_AA)
+>>>>>>> master
         # plot face
         # plt.imshow(face)
     # show the plot
     # if os.path.isfile('static/images/output_faces/output_image.jpg'):
     #     os.remove('static/images/output_faces/output_image.jpg')
     # output_path = 
+<<<<<<< HEAD
+    plt.savefig('static/images/output_faces/output_image.jpg', bbox_inches = "tight", pad_inches = 0)
+=======
     # plt.savefig('static/images/output_faces/output_image.jpg')
     cv2.imwrite('static/images/output_faces/output_image.jpg',image)
+>>>>>>> master
     # plot_image = plt.imread(output_path)
     # print(plot_image)
     time.sleep(5)

@@ -15,8 +15,8 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container" id="jumbot">
-          <h1 class="display-4">Gender Recognition Machine Learning Project</h1>
-          <p class="lead">Presented by "The Abandoned"<br> Julian Yanez, Trevor Kulbeth, Kelly McVey & Connor Crossey</p>
+          <h1 class="display-4" style="color: rgb(3, 25, 87); text-shadow: 1px 1px #ccc8c8;"><strong>Gender Recognition Machine Learning Project</strong></h1>
+          <p class="lead" style="color: rgb(3, 25, 87); text-shadow: 1px 1px #ccc8c8;"><strong>Presented by "The Abandoned"<br> Julian Yanez, Trevor Kulbeth, Kelly McVey & Connor Crossey</strong></p>
         </div>
       </div>
 
@@ -27,9 +27,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="/upload_image">Upload Image</a>
-              <a class="nav-item nav-link" href="/about_us">About Us</a>
+              <a class="nav-item nav-link" style=" color: antiquewhite;" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" style=" color: antiquewhite;" href="/upload_image"><strong>Upload Image</strong></a>
+              <a class="nav-item nav-link" style=" color: antiquewhite;" href="/about_us">About Us</a>
             </div>
           </div>
         </nav>
@@ -38,12 +38,13 @@
         <div class="row justify-content-md-center">
             <div class="col-md-12">
                 <!-- Code for uploading an image to the server -->
-                  <h2>Dont have a webcam?</h2>
-                  <p>You can also upload a file locally from your computer!</p>
+                  <br>
+                  <h2 class="center">Dont have a webcam?</h2>
+                  <p>You can also upload a file locally from your computer! Click on the Choose file button below then process the image.</p>
                   <hr>
-                  <form action="/upload_image" method="POST" enctype="multipart/form-data">
+                  <form action="/upload_image" class="center"  method="POST" enctype="multipart/form-data">
                     <input type="file" id="image" name="file"/>
-                    <input type="submit" value="Save File"/>
+                    <input type="submit" value="Process Image"/>
                   </form>
                   <hr>
                   {% with messages = get_flashed_messages() %}
@@ -58,6 +59,13 @@
                   <hr>
                   <!-- Calls a javascript file to output image to webpage for viewing. -->
                   <script src="{{url_for('static', filename='js/app.js')}}"></script>  
+<<<<<<< HEAD
+                  <div>
+                    <img class="output_image" src="{{ user_image }}" id = "output" alt="User Image" width="30%">
+                    <!-- {% for img_name in faceImages %} -->
+                    <!-- <img src="{{ userImage }}" id="outputFaces" width="100%" /> -->
+                    <!-- {% endfor %} -->
+=======
                   <div class="row">
                     <div class="col-10">
                       <img src="{{ user_image }}" id = "output" alt="User Image" class="w-100">
@@ -65,6 +73,7 @@
                       <img src="{{ userImage }}" id="outputFaces" width="100%" class="w-100" />
                       <!-- {% endfor %} -->
                     </div>
+>>>>>>> master
                   </div>
                   
               </div>

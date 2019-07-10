@@ -9,10 +9,6 @@ nav.navbar.navbar-expand-sm.navbar-light {
   background-color: #912e2e!important;
 }
 
-nav.nav-item.nav-link {
-  color: antiquewhite;
-}
-
 .jumbotron.jumbotron-fluid {
   margin-bottom: 0px;
   background-image: url("../images/faces2.png");
@@ -45,7 +41,21 @@ body {
   font-size: 18px;
   line-height: 150%;
   color: #333;
-  background: #6699ff;
+  /* background: #6699ff; */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.output_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .col {
@@ -73,10 +83,6 @@ a.btn-sm {
   color: #c9d1c8;
 }
 
-/* header {
-  background: #333;
-} */
-
 h1 {
   padding: 20px 0;
   margin: 0;
@@ -99,9 +105,9 @@ h3.name {
   text-align: center;
 }
 
-p {
+/* p {
   text-align: center;
-}
+} */
 
 a {
   color: #d21034;
