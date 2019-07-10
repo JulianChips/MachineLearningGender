@@ -59,6 +59,10 @@
                   <!-- Calls a javascript file to output image to webpage for viewing. -->
                   <script src="{{url_for('static', filename='js/app.js')}}"></script>  
                   <div>
+                    <img src="{{ user_image }}" id = "output" alt="User Image">
+                    <!-- {% for img_name in faceImages %} -->
+                    <img src="{{ userImage }}" id="outputFaces" width="100%" />
+                    <!-- {% endfor %} -->
                   </div>
               </div>
         </div>
