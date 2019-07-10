@@ -37,5 +37,8 @@ Contributions by Julian Yanez, Connor Crossey, Kelly McVey, and Trevor Kulbeth
 * Processing with OpenCV, MTCNN, and Model from file
 * OpenCV Drawing on Image then Saving for Web Viewing
 
-
-
+## Some Things Yet to Do:
+* Repurpose Webcam Code in Javascript for Deployment
+* Fix Browser caching issues when uploading and viewing processed file
+* Further Training/Improving on Model
+* Allow for Group Pictures
