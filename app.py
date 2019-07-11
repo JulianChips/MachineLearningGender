@@ -120,7 +120,7 @@ def process_img(face):
 def draw_faces(filepath, result_list):
     # load the image
     data = plt.imread(filepath)
-    # image = cv2.imread(filepath,1)
+    image = cv2.imread(filepath,1)
     # plot each face as a subplot
     for i in range(len(result_list)):
         # get coordinates
@@ -134,17 +134,20 @@ def draw_faces(filepath, result_list):
         # find gender for each face
         text = process_img(face)
 #         print(text)
-        plt.title(text, loc='center', fontdict={"fontsize": 24}, pad= 5)
+        # plt.title(text, loc='center', fontdict={"fontsize": 24}, pad= 5)
+        cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.putText(image, text, (5,25), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2, lineType=cv2.LINE_AA)
         # plot face
         # plt.imshow(face)
     # show the plot
     # if os.path.isfile('static/images/output_faces/output_image.jpg'):
     #     os.remove('static/images/output_faces/output_image.jpg')
     # output_path = 
-    plt.savefig('static/images/output_faces/output_image.jpg', bbox_inches = "tight", pad_inches = 0)
+    cv2.imwrite('static/images/output_faces/output_image.jpg',image)
+    # plt.savefig('static/images/output_faces/output_image.jpg', bbox_inches = "tight", pad_inches = 0)
     # plot_image = plt.imread(output_path)
     # print(plot_image)
-    time.sleep(5)
+    time.sleep(1)
 
     return render_template('upload_image.html')
     # return output_path
