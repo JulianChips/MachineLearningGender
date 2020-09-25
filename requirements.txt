@@ -5,7 +5,7 @@ mtcnn==0.0.9
 numpy==1.14.5
 opencv-python==4.1.0.25
 Pillow==6.0.0
-tensorflow==1.13.1
+tensorflow==1.15.4
 Theano==1.0.4
 gunicorn==19.9.0
 
